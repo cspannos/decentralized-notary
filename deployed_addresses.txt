@@ -1,0 +1,9 @@
+# Deployed dApp: Decentralized Notary
+URL: https://ipfs.infura.io/ipfs/QmY6u6UwUnsZgRd5tzMhMojnNRhyGX2PziAyHZ3Z5bp3wM/index.html
+Network (for Metamask): Ropsten
+
+# Deployed Smart Contracts
+## Notary.sol
+
+Address: 0x48c00508e71b2b1eee8cf97e6eae3831482b27c3
+Network: Ropsten
