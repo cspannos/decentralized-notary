@@ -19,7 +19,6 @@ The environment for this implementation relies upon:
     * react-scripts: 2.1.3
     * web3: 1.0.0-beta.37
 
- ## Prerequisites
 ### How to install:
 * Truffle: ``$ npm install truffle -g``
 * Ganache: download the AppImage for GUI / CLI ``$ npm install -g ganache-cli``
@@ -39,7 +38,7 @@ To spin this implementation up on your own machine, follow these steps:
 
 This last step will initialize a local implementation of this project and load in your browser at: http://localhost:3000/ . You will be able to upload a file from your local disk to IPFS and have the file’s hash returned in your browser.
 
-## Deployment
+### Deployment
 To deploy the dApp, you must first initiate a production build. Change directory to ‘/decentralized-notary/client’ and ``$ run npm run build``. Once the build is done, in a separate terminal run ``$ ipfs deamon``. In another separate terminal, cd to /decentralized-notary/client and run ``$ ipfs add -r build``, copy the last hash returned, indicating the root for the ‘build’ directory, then run ``$ ipfs swarm peers``, then ``$ ipfs name publish yourhashforthebuilddirectory``. Go to a gateway, such as https://ipfs.infura.io and load the hash with index.html as such: /ipfs/QmY6u6UwUnsZgRd5tzMhMojnNRhyGX2PziAyHZ3Z5bp3wM/index.html
 Go have a coffee, check your notifications and see if the dApp has loaded in your browser.
 
