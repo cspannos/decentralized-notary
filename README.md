@@ -34,7 +34,7 @@ To spin this implementation up on your own machine, follow these steps:
 -  run Ganache (GUI or CLI (cmd: ``$ ganache-cli``) ;
 - use the mnemonic code that Ganache provides to open MetaMask. Place the mnemonic in MetaMask’s option to ‘Import using account seed phrase’, and initialize your account.
 - in another terminal, also in the root directory, run ``$ truffle develop``;
-- in another terminal, cd to ‘decentralized-notary/client’, run ‘npm run start’;
+- in another terminal, cd to ‘decentralized-notary/client’, run ``$ npm run start``;
 
 This last step will initialize a local implementation of this project and load in your browser at: http://localhost:3000/ . You will be able to upload a file from your local disk to IPFS and have the file’s hash returned in your browser.
 
