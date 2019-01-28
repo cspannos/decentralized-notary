@@ -1,9 +1,13 @@
 pragma solidity ^0.5.0;
+import "./Ownable.sol";
 
 /// @author Chris Spannos
 /// @title Decentalized Notary
 contract Notary {
     string ipfsHash;
+    ///For circuitbreaker
+    bool private stopped = false;
+    address private owner;
 
     /// Grabs the IPFS file hash based on the address.
     mapping (address => string) ipfsInbox;
@@ -17,8 +21,18 @@ contract Notary {
     /// returnipfsHash calls the IPFS file hash for display in the TX receipt.
     event returnipfsHash(string ipfsEth);
 
+    /// For circuitbreaker
+    modifier isAdmin() {
+        require(msg.sender == owner);
+        _;
+    }
+
     /// Modifiers are used here to check the account state in the function 'sendIPFS' for account notificaitons.
-    modifier notFull (string memory _string) {bytes memory stringTest = bytes(_string); require (stringTest.length == 0); _;}
+    modifier notFull (string memory _string) {
+      bytes memory stringTest = bytes(_string);
+      require (stringTest.length == 0);
+      _;
+    }
 
     /// This empty constructor is used to initialize the contract.
     constructor() public {
@@ -65,4 +79,23 @@ contract Notary {
             emit inboxResponse(ipfs_hash);
         }
     }
+    /// For circuitbreaker
+    function toggleContractActive() isAdmin public {
+        // You can add an additional modifier that restricts stopping a contract to be based on another action, such as a vote of users
+        stopped = !stopped;
+    }
+    /// For circuitbreaker
+    modifier stopInEmergency { if (!stopped) _; }
+    modifier onlyInEmergency { if (stopped) _; }
+
+    /// For circuitbreaker
+    function deposit() stopInEmergency public {
+        // some code
+    }
+
+    /// For circuitbreaker
+    function withdraw() onlyInEmergency public {
+        // some code
+    }
+
 }
