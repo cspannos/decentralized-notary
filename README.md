@@ -1,6 +1,7 @@
 # Decentralized Notary  
-This Decentralized Notary harnesses the power of the Ethereum blockchain and the InterPlanetary File System (IPFS) to verify the authenticity of files. It does so by utilizing the IPFS hash of files and storing them on Ethereum. Additionally, this notary returns a transaction receipt certifying that the IPFS hash was registered on the blockchain. It is possible to send your file’s IPFS hash to an Ethereum account as likewise users can send their file hashes to you.   
-Please note that this is an MVP and I am still working on specifications and bugs.
+This Decentralized Notary harnesses the power of the Ethereum blockchain and the InterPlanetary File System (IPFS) to verify the authenticity of files. It does so by, not only using IPFS as a peer-to-peer hosting platform for this dApp, but by also utilizing the IPFS hash of files as Proof-of-Existance and storing the proofs on the Ethereum blockchain. Additionally, this notary returns a transaction receipt certifying that the IPFS hash was registered on the blockchain. It is possible to send your file’s IPFS hash to an Ethereum account as likewise users can send their file hashes to you.   
+
+Please note that this is an MVP and I am still building out specifications and squashing bugs.
 
 ## Getting Started
 The environment for this implementation relies upon:
