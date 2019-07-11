@@ -52,7 +52,7 @@ The Consumer bounty is:
 
 
 ## Project Team
-* Chris Spannos: Chris has 20 years experience in news media production as an editor, journalist, web developer, and project manager. He has worked across radio and video broadcast media as well as print and digital. In January 2019, ConsenSys Developer Academy awarded Chris certification as a full stack Ethereum blockchain engineer. In May 2018, the Ethereum Foundation awarded Chris a grant to help onboard developers to work on layer one and layer two scaling solutions (scaling.today).
+* Chris Spannos: Chris has 20 years experience in news media production as an editor, journalist, web developer, and project manager. He has worked with international and interdisciplinary teams across radio and video broadcast media as well as print and digital. In January 2019, ConsenSys Developer Academy awarded Chris certification as a full stack Ethereum blockchain engineer. In May 2018, the Ethereum Foundation awarded Chris a grant to help onboard developers to work on layer one and layer two scaling solutions (scaling.today).
 * Email: spannos@gmail.com
 * OK to contact about future hackathons
 
