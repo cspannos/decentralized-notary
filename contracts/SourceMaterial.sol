@@ -2,8 +2,9 @@ pragma solidity ^0.5.0;
 import "./Ownable.sol";
 
 /// @author Chris Spannos
-/// @title Decentalized Notary
-contract Notary {
+/// @title Invest-y-gative
+
+contract SourceMaterial {
     string ipfsHash;
     ///For circuitbreaker
     bool private stopped = false;

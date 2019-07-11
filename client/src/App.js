@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import NotaryContract from "./contracts/Notary.json";
+import SourceMaterial from "./contracts/SourceMaterial.json";
 import getWeb3 from "./utils/getWeb3";
 import ipfs from "./ipfs";
 import storehash from "./storehash";
@@ -40,9 +40,9 @@ class App extends Component {
 
       // Get the contract instance.
       const networkId = await web3.eth.net.getId();
-      const deployedNetwork = NotaryContract.networks[networkId];
+      const deployedNetwork = SourceMaterial.networks[networkId];
       const instance = new web3.eth.Contract(
-        NotaryContract.abi,
+        SourceMaterial.abi,
         deployedNetwork && deployedNetwork.address,
       );
 
@@ -168,18 +168,32 @@ class App extends Component {
        return (
          <div className="App">
          <header className="App-header">
-         <h1>Decentralized Notary</h1>
+         <h1>Invest-y-gative</h1>
+
+         <p align="center">We value:
+         <ul>
+         <li>Editorial Transparency</li>
+         <li>Accuracy and Accountability</li>
+         <li>Source Protection</li>
+         <li>Freedom of Speech</li>
+         </ul>
+         </p>
+
+         <p>Invest-y-gative leverages Web3 blockchain technology to drive investigative journalism, based on the methodology of scientific journalism, in the public interest.</p>
+
+<p>Use our dropbox to submit your source material and pitches for investigative reports below.</p>
+
        </header>
-         <h2> 1. Upload a file to IPFS </h2>
+         <h2> 1. Upload your source material/pitches to IPFS</h2>
            <form id="ipfs-hash-form" className="scep-form" onSubmit={this.onIPFSSubmit}>
              <input type="file" onChange={this.captureFile} />
              <button type="submit"> Upload </button>
            </form>
-           <p> The IPFS hash is: {this.state.ipfsHash}</p>
-         <h2> 2. Send notifications </h2>
+           <p> Your submission's IPFS hash is: {this.state.ipfsHash}</p>
+         <h2> 2. Notify Invest-y-gative Editors of your submission</h2>
            <form id="new-notification-form" className="scep-form" onSubmit={this.handleSendIPFS}>
              <label>
-               Receiver Address:
+               Editorial Address:
                <input type="text" value={this.state.value} onChange={this.handleChangeAddress} />
              </label>
              <label>
@@ -188,13 +202,13 @@ class App extends Component {
              </label>
              <input type="submit" value="Submit" />
            </form>
-         <h2> 3. Receive Notifications </h2>
+         <h2> 3. Check for a reply from Invest-y-gative</h2>
            <button type="submit" onClick={this.handleReceiveIPFS}>Receive IPFS</button>
            <div>{this.state.receivedIPFS}</div>
-         <h2> 4. Receive Transaction Receipt</h2>
+         <h2> 4. Receive a Transaction Receipt for your Submission</h2>
                <button type="submit" onSubmit={this.onIPFSSubmit}>Get Transaction Receipt </button>
 
-                        <h2>IPFS Hash # stored on Eth Contract</h2>
+                        <h2>IPFS submission Hash # stored on Ethereum</h2>
                          <div>{this.state.ipfsHash}</div>
                          <h2>Ethereum Contract Address</h2>
                          <div>{this.state.ethAddress}</div>

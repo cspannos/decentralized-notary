@@ -1,5 +1,5 @@
-var Notary = artifacts.require("./Notary.sol");
+var SourceMaterial = artifacts.require("./SourceMaterial.sol");
 
 module.exports = function(deployer) {
-  deployer.deploy(Notary);
+  deployer.deploy(SourceMaterial);
 };
