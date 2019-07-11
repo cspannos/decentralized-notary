@@ -64,4 +64,4 @@ Go have a coffee, check your notifications and see if the dApp has loaded in you
 https://ipfs.infura.io/ipfs/QmbJaYANQ75AJmWkDJqL7MB6P2XLySEQCUuCtuiU3T4Twv/index.html
 
 ## Authors
-Chris Spannos - Breaking News: Reinventing The Online News Economy - ConsenSys Beyond Blockchain Hackathon 2019
+Chris Spannos - ConsenSys Beyond Blockchain Hackathon 2019 - Breaking News: Reinventing The Online News Economy
